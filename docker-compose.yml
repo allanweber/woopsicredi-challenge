@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always    
+    hostname: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodata:/data/db
+                  
+  api-service:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: api
+    links:
+      - mongo
+    environment:
+       - SPRING_DATA_MONGODB_HOST=mongo
+    depends_on:
+      - mongo
+    ports:
+      - "8080:8080"
+    restart: always
+      
+volumes:
+  mongodata:
