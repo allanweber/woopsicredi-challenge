@@ -37,7 +37,7 @@ Must have Docker instaled
 
 ## Run Separately
 
-* Create a docker instance for MongoDb in the properly port 27017, run de commando: **docker run -p 27017:27017 mongo**
+* Create a docker instance for MongoDb in the properly port 27017, run de command: **docker run -p 27017:27017 mongo**
 * go to api directory and run: **gradlew bootRun**
 * access the url **localhost:8080** or swagger **http://localhost:8080/swagger-ui.html**
 
