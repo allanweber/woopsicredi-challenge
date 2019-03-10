@@ -32,6 +32,7 @@ Must have Docker instaled
 
 ## Run All Together
 
+* go to api directory and run: **gradlew build**
 * In the root path run the docker compose file: **docker-compose up**
 * access the url **localhost:8080** or swagger **http://localhost:8080/swagger-ui.html**
 
